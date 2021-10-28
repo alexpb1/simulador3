@@ -1,0 +1,108 @@
+<<<<<<< HEAD
+{% extends 'base.html'%}
+{% load static %}
+{% block title %} Lista de Tarefas {% endblock%}
+{% block content%}
+        <div>
+            <div style="border: 2px; border-style: ridge; margin-top: 30px; text-align:center;">
+                Valor = R$ {{dadossimulacao.valor.value| floatformat:2}} &nbsp&nbsp&nbsp&nbsp
+                Divisão = {{dadossimulacao.divisao.value}} PARCELAS &nbsp&nbsp&nbsp&nbsp
+                Carência = {{dadossimulacao.carencia.value}} ano(s) &nbsp&nbsp&nbsp&nbsp
+                Taxa = {{dadossimulacao.taxa.value| floatformat:2}} % a.a
+            </div>   
+        </div>
+        <div style="margin-top: 30px;margin-left: 25%;">
+            <table >
+                <thead >
+                    <th style="width: 150px;">
+                        Nº da parcela
+                    </th>
+                    <th style="width: 150px;">
+                        Data
+                    </th>
+                    <th style="width: 150px;">
+                        Valor em R$
+                    </th>
+                    <th style="width: 200px;">
+                        Saldo devedor em R$
+                    </th>
+                </thead>
+                <td>
+                {% for listaContadorParcela in listaContadorParcela %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaContadorParcela }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaDataParcela in listaDataParcela %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaDataParcela }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaResultado in listaResultado %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaResultado|floatformat:2 }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaSaldoDev in listaSaldoDev %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaSaldoDev|floatformat:2 }}</p>
+                {% endfor %} 
+                </td>
+            </table>
+        </div>
+
+        <a href="/" style="margin-left: 45%;">Nova Simulação</a>
+=======
+{% extends 'base.html'%}
+{% load static %}
+{% block title %} Lista de Tarefas {% endblock%}
+{% block content%}
+        <div>
+            <div style="border: 2px; border-style: ridge; margin-top: 30px; text-align:center;">
+                Valor = R$ {{dadossimulacao.valor.value| floatformat:2}} &nbsp&nbsp&nbsp&nbsp
+                Divisão = {{dadossimulacao.divisao.value}} PARCELAS &nbsp&nbsp&nbsp&nbsp
+                Carência = {{dadossimulacao.carencia.value}} ano(s) &nbsp&nbsp&nbsp&nbsp
+                Taxa = {{dadossimulacao.taxa.value| floatformat:2}} % a.a
+            </div>   
+        </div>
+        <div style="margin-top: 30px;margin-left: 25%;">
+            <table >
+                <thead >
+                    <th style="width: 150px;">
+                        Nº da parcela
+                    </th>
+                    <th style="width: 150px;">
+                        Data
+                    </th>
+                    <th style="width: 150px;">
+                        Valor em R$
+                    </th>
+                    <th style="width: 200px;">
+                        Saldo devedor em R$
+                    </th>
+                </thead>
+                <td>
+                {% for listaContadorParcela in listaContadorParcela %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaContadorParcela }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaDataParcela in listaDataParcela %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaDataParcela }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaResultado in listaResultado %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaResultado|floatformat:2 }}</p>
+                {% endfor %} 
+                </td>
+                <td>
+                {% for listaSaldoDev in listaSaldoDev %}
+                    <p style="border-bottom-style: ridge; border-width: 2px; text-align:center">{{ listaSaldoDev|floatformat:2 }}</p>
+                {% endfor %} 
+                </td>
+            </table>
+        </div>
+
+        <a href="/" style="margin-left: 45%;">Nova Simulação</a>
+>>>>>>> ff6a3c90b9141ef6edc7254235d24cf57f2487b3
+{% endblock %}

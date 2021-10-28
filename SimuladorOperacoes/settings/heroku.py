@@ -1,6 +1,5 @@
 import environ
 
-
 from SimuladorOperacoes.settings.base import *
 
 env=environ.Env()

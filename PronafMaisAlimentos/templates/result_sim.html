@@ -3,14 +3,15 @@
 {% block title %} Lista de Tarefas {% endblock%}
 {% block content%}
         <div>
-            <div style="border: 2px; border-style: ridge; margin-top: 30px; text-align:center;">
+            <div style="border: 2px; border-style: ridge;text-align:center;">
                 Valor = R$ {{dadossimulacao.valor.value| floatformat:2}} &nbsp&nbsp&nbsp&nbsp
                 Divisão = {{dadossimulacao.divisao.value}} PARCELAS &nbsp&nbsp&nbsp&nbsp
                 Carência = {{dadossimulacao.carencia.value}} ano(s) &nbsp&nbsp&nbsp&nbsp
                 Taxa = {{dadossimulacao.taxa.value| floatformat:2}} % a.a
             </div>   
         </div>
-        <div style="margin-top: 30px;margin-left: 25%;">
+        <div style="margin-top: 30px;">
+        <center>
             <table >
                 <thead >
                     <th style="width: 150px;">
@@ -47,7 +48,9 @@
                 {% endfor %} 
                 </td>
             </table>
+            <a href="/">Nova Simulação</a>
+        </center>
         </div>
 
-        <a href="/" style="margin-left: 45%;">Nova Simulação</a>
+        
 {% endblock%}

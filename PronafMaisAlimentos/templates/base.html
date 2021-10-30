@@ -9,18 +9,20 @@
     <title>Resultado</title>
 </head>
 <body>
-    <div style="padding: 20px">
-        <div>
-            <container style="margin-left: 46%;">
-                <img src="{% static 'imagem_pronaf_mais_alimentos.png' %}" style="width: 100px;" alt="">
-                <p style="text-align:center">SIMULAÇÃO</p>
-            </container>
-        </div>
-{% block content %} {% endblock%}
-
+    <div style="padding: 20px; margin: 0 auto;">
+            <center>
+                    <img src="{% static 'imagem_pronaf_mais_alimentos.png' %}" style="width: 100px;" alt="">
+                    <p style="text-align:center">SIMULAÇÃO</p>
+                    
+            </center>      
     </div>
+    {% block content %} {% endblock%}
+
 </body>
 <footer>
+    <center style="margin-top: 20px;">
+    Nota: Este site é apenas um projeto para estudo de programação web, não é ferramenta oficial homologada por Bancos ou pelo MDA.
+    </center>
     <div style="border-top: 10px; border-style: ridge;">
         @alex_Software
     </div>

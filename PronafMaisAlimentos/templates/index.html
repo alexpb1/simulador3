@@ -3,27 +3,22 @@
 {% block content%}
     <form action="{% url 'minha_sim' %}" method="GET">
     {% csrf_token %}
-    <table style="margin-left: 34%;">
-        <td>
-            <div style="text-align-last: right;">
-                <div style="margin-bottom: 25px;">Valor </div>
-                <div style="margin-bottom: 25px;">Nº de parcelas </div>
-                <div style="margin-bottom: 23px;">Anos de carência </div>
-                <div style="margin-bottom: 22px;">Taxa de juros a.a. </div>
-            </div> 
-        </td>
-        <td>
-            <div style="text-align-last: center; list-style: none;">
-                <div style="margin-bottom: 20px;">{{dadossimulacao.valor}}</div> 
-                <div style="margin-bottom: 20px;">{{dadossimulacao.divisao}}</div> 
-                <div style="margin-bottom: 20px;">{{dadossimulacao.carencia}}</div> 
-                <div style="margin-bottom: 20px;">{{dadossimulacao.taxa}}</div> 
-            </div> 
-        </td>
-    </table>
-    <div style="margin-left: 47%;">
-        <input type='submit' value="SIMULA" class="btn btn-success">
-    </div>
+    <center >
+        <div style="text-align-last: center;">
+            <div>Valor </div>
+            <div style="margin-bottom: 20px;text-align: center;">{{dadossimulacao.valor}}</div> 
+            <div>Nº de parcelas </div>
+            <div style="margin-bottom: 20px;">{{dadossimulacao.divisao}}</div> 
+            <div >Anos de carência </div>
+            <div style="margin-bottom: 20px;">{{dadossimulacao.carencia}}</div> 
+            <div>Taxa de juros a.a. </div>
+            <div style="margin-bottom: 20px;">{{dadossimulacao.taxa}}</div> 
+        </div> 
+       
+        <div style="margin-bottom: 30px;">
+            <input type='submit' value="SIMULA" class="btn btn-success">
+        </div>
+    </center> 
     </form>
     
 {% endblock %}
